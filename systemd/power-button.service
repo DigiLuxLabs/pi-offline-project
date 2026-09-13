@@ -1,0 +1,12 @@
+[Unit]
+Description=GPIO3 hold-to-shutdown button 
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/power-button
+Restart=always
+RestartSec=3
+
+[Install] 
+WantedBy=multi-user.target
